@@ -17,6 +17,6 @@ class Solution:
         if activation=="sigmoid":
             act=1/(1+(math.exp(-z)))
             pass
-        elif activation=="relu":
+        else:
             act=float(max(0, z))
         return round(act, 5)
