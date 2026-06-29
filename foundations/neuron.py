@@ -14,9 +14,4 @@ class Solution:
         # ReLU: max(0, z)
         # return round(your_answer, 5)
         z=(x@w)+b
-        if activation=="sigmoid":
-            act=1/(1+(math.exp(-z)))
-            pass
-        else:
-            act=float(max(0, z))
-        return round(act, 5)
+        return round(1/(1+(math.exp(-z))), 5) if activation=="sigmoid" else round(float(max(0, z)), 5)
